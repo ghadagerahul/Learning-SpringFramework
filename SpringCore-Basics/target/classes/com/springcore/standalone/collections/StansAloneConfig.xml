@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans file:/C:/Users/inb322rahgha/Desktop/XSD/spring-beans.xsd.xml
+						http://www.springframework.org/schema/util file:/C:/Users/inb322rahgha/Desktop/XSD/spring-util.xsd.xml">
+
+	<!--Standalone collection-List-->
+	<util:list list-class="java.util.ArrayList" id="subjectList">
+		<value>Marathi</value>
+		<value>Hindi</value>
+		<value>English</value>
+		<value>Maths</value>
+		<value>geography</value>
+		<value>Physics</value>
+	</util:list>
+
+	<bean class="com.springcore.standalone.collections.Education"
+		name="education1">
+		<property name="subjects" ref="subjectList" />
+	</bean>
+
+
+	<!--Standalone collection-set-->
+	<util:set  id="deptSet">
+		<value>Electronics</value>
+		<value>Chemistry</value>
+		<value>Physics</value>
+		<value>Maths</value>
+		<value>Biology</value>
+	</util:set>
+
+	<bean class="com.springcore.standalone.collections.Education"
+		name="education2">
+		<property name="departments" ref="deptSet" />
+	</bean>
+
+	<!--Standalone collection-map-->
+	<util:map map-class="java.util.HashMap" id="courseMap">
+		<entry key="DSA" value="20000" />
+		<entry key="JAV" value="15000" />
+		<entry key="SQL" value="10000" />
+		<entry key="Frontend" value="12000" />
+
+	</util:map>
+
+	<bean class="com.springcore.standalone.collections.Education"
+		name="education3">
+		<property name="feesForCourses" ref="courseMap" />
+	</bean>
+
+	<!--Property Collection-->
+	<util:properties id="datacon">
+
+		<prop key="url">localhost:3306</prop>
+		<prop key="name">rahul</prop>
+		<prop key="pwd">rahul@123</prop>
+		<prop key="datasource-sriver">jdbc.mysql.driver/mysql</prop>
+		<prop key="DDL">update</prop>
+
+	</util:properties>
+
+	<bean name="education4"
+		class="com.springcore.standalone.collections.Education">
+		<property name="props" ref="datacon" />
+	</bean>
+
+</beans>

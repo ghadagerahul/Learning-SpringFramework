@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="personalData1"
+		class="com.springcore.beanlifecycle.interfaceConfig.PersonalData1">
+
+		<property name="pid" value="02" />
+		<property name="pName" value="Abhiman" />
+		<property name="pAddress" value="Akluj" />
+
+	</bean>
+
+</beans>
