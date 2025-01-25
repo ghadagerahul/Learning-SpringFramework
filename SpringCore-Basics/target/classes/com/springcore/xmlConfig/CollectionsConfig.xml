@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean name="collectionsBeansInject"
+		class="com.springcore.CollectionsBeansInject">
+		<property name="id" value="11" />
+		<property name="list">
+			<list>
+				<value>Rahul</value>
+				<value>Prashant</value>
+				<value>Swati</value>
+			</list>
+		</property>
+
+		<property name="set">
+			<set>
+				<value>Swati</value>
+				<value>Prashant</value>
+				<value>Rahul</value>
+			</set>
+		</property>
+
+		<property name="map">
+			<map>
+				<entry key="name" value="Rahul" />
+				<entry key="age" value="25" />
+				<entry key="education" value="BE" />
+			</map>
+		</property>
+	</bean>
+
+</beans>
+
+	
+	
